@@ -28,7 +28,7 @@ function generatePassword() {
       finalPassword = buildPassword();
     }
   } else {
-    alert("Try again! Number of characters needs to be between 8 & 128."); // This doesn't work as it should
+    alert("Try again! Number of characters needs to be between 8 & 128."); // Why does this show up after user has already entered all their data? Works as it should, but appears later than it should.
   }
 
   return finalPassword;
@@ -47,13 +47,13 @@ function getFinalCharactersAllowed() {
     chosenCharacters = chosenCharacters.concat(numbersList);
   }
   if (specialCharsAllowed === true) {
-    chosenCharacters = chosenCharacters.concat(specialCharsAllowed);
+    chosenCharacters = chosenCharacters.concat(specialCharactersList);
   }
   if (lowercaseAllowed === true) {
-    chosenCharacters = chosenCharacters.concat(lowercaseAllowed);
+    chosenCharacters = chosenCharacters.concat(lowercaseList);
   }
   if (uppercaseAllowed === true) {
-    chosenCharacters = chosenCharacters.concat(uppercaseAllowed);
+    chosenCharacters = chosenCharacters.concat(uppercaseList);
   }
 }
 
